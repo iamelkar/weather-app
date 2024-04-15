@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../partials/head'); %>
+    <title>Document</title>
+    <style>
+      body {
+        background-color: #f8f9fa; /* Change background color if needed */
+      }
+      .welcome-container {
+        margin-top: 100px; /* Adjust margin-top to center the content vertically */
+      }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/bangkok">Bangkok</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/davao">Davao</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/florence">Florence</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/prague">Prague</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sydney">Sydney</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/vancouver">Vancouver</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container welcome-container">
+    <div class="jumbotron">
+        <h1 class="display-4 text-center">Welcome to My Weather App</h1>
+        <p class="lead text-center">Stay informed about the weather conditions.</p>
+    </div>
+</div>
+</body>
+</html>

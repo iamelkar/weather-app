@@ -1,0 +1,19 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon newindex.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-random-string": "^5.0.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^3.0.3",
+    "weather-js": "^2.0.0"
+  }
+}

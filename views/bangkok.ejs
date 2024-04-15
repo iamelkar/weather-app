@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include('../partials/head'); %>
+    <style>
+        .flag{
+            margin-top: 50px;
+            border: 3px solid gray;
+            border-radius: 50px;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+    <main>
+   <!-- <h1>Welcome to Davao</h1> -->
+   <!-- <%- weatherbkk %> -->
+
+   <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/bangkok">Bangkok</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/davao">Davao</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/florence">Florence</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/prague">Prague</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/sydney">Sydney</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/vancouver">Vancouver</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <center>
+    <div>
+        <img src ="https://cdn-icons-png.flaticon.com/512/197/197452.png" class="flag"/>
+        <h4><%= weatherbkk[0].location.name %> </h4>
+    </div>
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Date</th>
+                <th>Weather</th>
+                <th>Icon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-success">
+                <td>Today, <%= weatherbkk[1].current.day %></td>
+                <td><%= weatherbkk[1].current.date %></td>
+                <td><%= weatherbkk[1].current.skytext %></td>
+                <td><img src="<%= weatherbkk[1].current.imageUrl%>" /></td>
+            </tr>
+            <tr class="table-info">
+                <td><%= weatherbkk[1].forecast[1].day %></td>
+                <td><%= weatherbkk[1].forecast[1].date %></td>
+                <td><%= weatherbkk[1].forecast[1].skytextday %></td>
+                <td></td>
+            </tr>
+            <tr class="table-info">
+                <td><%= weatherbkk[1].forecast[2].day %></td>
+                <td><%= weatherbkk[1].forecast[2].date %></td>
+                <td><%= weatherbkk[1].forecast[2].skytextday %></td>
+                <td></td>
+            </tr>
+            <tr class="table-info">
+                <td><%= weatherbkk[1].forecast[3].day %></td>
+                <td><%= weatherbkk[1].forecast[3].date %></td>
+                <td><%= weatherbkk[1].forecast[3].skytextday %></td>
+                <td></td>
+            </tr>
+            <tr class="table-info">
+                <td><%= weatherbkk[1].forecast[4].day %></td>
+                <td><%= weatherbkk[1].forecast[4].date %></td>
+                <td><%= weatherbkk[1].forecast[4].skytextday %></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+   </center>
+</main>
+</body>
+</html>
