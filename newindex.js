@@ -3,6 +3,8 @@ const weather = require('weather-js');
 const express = require('express')
 const app = express()
 
+const icons = require('./data');
+
 app.set('view engine', 'ejs')
 const port = 8000;
 
@@ -25,7 +27,7 @@ app.get('/davao', function (req, res) {
         if(err) console.log(err);
        else{
         let data = {
-            weatherdvo: eval(JSON.stringify(result, null, 2))
+            weatherdvo: eval(JSON.stringify(result, null, 2)),
         }
         res.render('davao', data)
        }
@@ -38,7 +40,7 @@ app.get('/bangkok', function (req, res) {
         if(err) console.log(err);
        else{
         let data = {
-            weatherbkk: eval(JSON.stringify(result, null, 2))
+            weatherbkk: eval(JSON.stringify(result, null, 2)),
         }
         res.render('bangkok', data)
        }
@@ -51,8 +53,9 @@ app.get('/florence', function (req, res) {
         if(err) console.log(err);
        else{
         let data = {
-            weatherflr: eval(JSON.stringify(result, null, 2))
+            weatherflr: eval(JSON.stringify(result, null, 2)),
         }
+        data.
         res.render('florence', data)
        }
       });
@@ -64,7 +67,7 @@ app.get('/vancouver', function (req, res) {
         if(err) console.log(err);
        else{
         let data = {
-            weathervcv: eval(JSON.stringify(result, null, 2))
+            weathervcv: eval(JSON.stringify(result, null, 2)),
         }
         res.render('vancouver', data)
        }
@@ -77,7 +80,8 @@ app.get('/sydney', function (req, res) {
         if(err) console.log(err);
        else{
         let data = {
-            weathersyd: eval(JSON.stringify(result, null, 2))
+            weathersyd: eval(JSON.stringify(result, null, 2)),
+            weIcons: eval(JSON.stringify(result, null, 2))
         }
         res.render('sydney', data)
        }
@@ -90,7 +94,8 @@ app.get('/prague', function (req, res) {
         if(err) console.log(err);
        else{
         let data = {
-            weatherprg: eval(JSON.stringify(result, null, 2))
+            weatherprg: eval(JSON.stringify(result, null, 2)),
+            weIcons: eval(JSON.stringify(result, null, 2))
         }
         res.render('prague', data)
        }

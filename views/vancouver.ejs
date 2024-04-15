@@ -13,6 +13,19 @@
             width: 100px;
             height: 100px;
         }
+
+        .footer-pg{
+          position: absolute;
+          bottom:0px;
+          width: 100%;
+          color: white;
+          background-color: gray;
+          padding: 15px;
+        }
+        p{
+          padding: 0;
+          margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -55,7 +68,10 @@
    <center>
     <div>
         <img src ="https://cdn-icons-png.flaticon.com/512/3909/3909455.png" class="flag"/>
-        <h4><%= weathervcv[0].location.name %> </h4>
+        <p></p>
+        <h2><%= weathervcv[0].location.name %> </h2>
+        <h3>Observation Time: <%= weathervcv[0].current.observationtime %></h3>
+        <p></p>
     </div>
 
     <table class="table table-hover">
@@ -78,28 +94,33 @@
                 <td><%= weathervcv[1].forecast[1].day %></td>
                 <td><%= weathervcv[1].forecast[1].date %></td>
                 <td><%= weathervcv[1].forecast[1].skytextday %></td>
-                <td></td>
+                <td><img src="<%= weathervcv[1].current.imageUrl%>" /></td>
             </tr>
             <tr class="table-info">
                 <td><%= weathervcv[1].forecast[2].day %></td>
                 <td><%= weathervcv[1].forecast[2].date %></td>
                 <td><%= weathervcv[1].forecast[2].skytextday %></td>
-                <td></td>
+                <td><img src="<%= weathervcv[1].current.imageUrl%>" /></td>
             </tr>
             <tr class="table-info">
                 <td><%= weathervcv[1].forecast[3].day %></td>
                 <td><%= weathervcv[1].forecast[3].date %></td>
                 <td><%= weathervcv[1].forecast[3].skytextday %></td>
-                <td></td>
+                <td><img src="<%= weathervcv[1].current.imageUrl%>" /></td>
             </tr>
             <tr class="table-info">
                 <td><%= weathervcv[1].forecast[4].day %></td>
                 <td><%= weathervcv[1].forecast[4].date %></td>
                 <td><%= weathervcv[1].forecast[4].skytextday %></td>
-                <td></td>
+                <td><img src="<%= weathervcv[1].current.imageUrl%>" /></td>
             </tr>
         </tbody>
     </table>
+
+    <footer class="footer-pg">
+      <p>Coded by: Kharhyll Joy D. Laranio</p>
+    </footer>
+
    </center>
 </main>
 </body>
