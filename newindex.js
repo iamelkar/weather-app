@@ -55,7 +55,6 @@ app.get('/florence', function (req, res) {
         let data = {
             weatherflr: eval(JSON.stringify(result, null, 2)),
         }
-        data.
         res.render('florence', data)
        }
       });
@@ -80,8 +79,7 @@ app.get('/sydney', function (req, res) {
         if(err) console.log(err);
        else{
         let data = {
-            weathersyd: eval(JSON.stringify(result, null, 2)),
-            weIcons: eval(JSON.stringify(result, null, 2))
+            weathersyd: eval(JSON.stringify(result, null, 2))
         }
         res.render('sydney', data)
        }
@@ -94,8 +92,7 @@ app.get('/prague', function (req, res) {
         if(err) console.log(err);
        else{
         let data = {
-            weatherprg: eval(JSON.stringify(result, null, 2)),
-            weIcons: eval(JSON.stringify(result, null, 2))
+            weatherprg: eval(JSON.stringify(result, null, 2))
         }
         res.render('prague', data)
        }

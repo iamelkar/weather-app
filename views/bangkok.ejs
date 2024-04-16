@@ -26,6 +26,10 @@
           padding: 0;
           margin: 0;
         }
+        .icons{
+          width: 30px;
+          height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -94,25 +98,52 @@
                 <td><%= weatherbkk[1].forecast[1].day %></td>
                 <td><%= weatherbkk[1].forecast[1].date %></td>
                 <td><%= weatherbkk[1].forecast[1].skytextday %></td>
-                <td><img src="<%= icons.weatherIcons[0].sunny%>"></td>
+                <% if(weatherbkk[1].forecast[1].skytextday.includes("Sunny")){ %>
+                  <td><img src="https://cdn-icons-png.flaticon.com/512/3222/3222691.png" class="icons"></td>
+                  <% } else if(weatherbkk[1].forecast[1].skytextday.includes("Rain")) { %>
+                  <td><img src="https://cdn-icons-png.flaticon.com/256/704/704730.png" class="icons"></td>
+                  <% } else { %>
+                    <td><img src="https://cdn-icons-png.flaticon.com/512/6643/6643032.png" class="icons"></td>
+                  <% } %>
             </tr>
+
             <tr class="table-info">
                 <td><%= weatherbkk[1].forecast[2].day %></td>
                 <td><%= weatherbkk[1].forecast[2].date %></td>
                 <td><%= weatherbkk[1].forecast[2].skytextday %></td>
-                <td><img src="https://cdn-icons-png.flaticon.com/512/3222/3222691.png"></td>
+                <<% if(weatherbkk[1].forecast[2].skytextday.includes("Sunny")){ %>
+                  <td><img src="https://cdn-icons-png.flaticon.com/512/3222/3222691.png" class="icons"></td>
+                  <% } else if(weatherbkk[1].forecast[2].skytextday.includes("Rain")) { %>
+                  <td><img src="https://cdn-icons-png.flaticon.com/256/704/704730.png" class="icons"></td>
+                  <% } else { %>
+                    <td><img src="https://cdn-icons-png.flaticon.com/512/6643/6643032.png" class="icons"></td>
+                  <% } %>
             </tr>
+
             <tr class="table-info">
                 <td><%= weatherbkk[1].forecast[3].day %></td>
                 <td><%= weatherbkk[1].forecast[3].date %></td>
                 <td><%= weatherbkk[1].forecast[3].skytextday %></td>
-                <td><img src="<%= weatherbkk[1].current.imageUrl%>"></td>
+                <% if(weatherbkk[1].forecast[3].skytextday.includes("Sunny")){ %>
+                  <td><img src="https://cdn-icons-png.flaticon.com/512/3222/3222691.png" class="icons"></td>
+                  <% } else if(weatherbkk[1].forecast[3].skytextday.includes("Rain")) { %>
+                  <td><img src="https://cdn-icons-png.flaticon.com/256/704/704730.png" class="icons"></td>
+                  <% } else { %>
+                    <td><img src="https://cdn-icons-png.flaticon.com/512/6643/6643032.png" class="icons"></td>
+                  <% } %>
             </tr>
+
             <tr class="table-info">
                 <td><%= weatherbkk[1].forecast[4].day %></td>
                 <td><%= weatherbkk[1].forecast[4].date %></td>
                 <td><%= weatherbkk[1].forecast[4].skytextday %></td>
-                <td><img src="<%= weatherbkk[1].current.imageUrl%>"></td>
+                <% if(weatherbkk[1].forecast[4].skytextday.includes("Sunny")){ %>
+                  <td><img src="https://cdn-icons-png.flaticon.com/512/3222/3222691.png" class="icons"></td>
+                  <% } else if(weatherbkk[1].forecast[4].skytextday.includes("Rain")) { %>
+                  <td><img src="https://cdn-icons-png.flaticon.com/256/704/704730.png" class="icons"></td>
+                  <% } else { %>
+                    <td><img src="https://cdn-icons-png.flaticon.com/512/6643/6643032.png" class="icons"></td>
+                  <% } %>
             </tr>
         </tbody>
     </table>
